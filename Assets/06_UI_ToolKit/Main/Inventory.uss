@@ -1,0 +1,31 @@
+.slot {
+    width: 170px;
+    height: 170px;
+    background-color: rgba(29, 29, 29, 255);
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-left-color: rgba(144, 144, 144, 255);
+    border-right-color: rgba(144, 144, 144, 255);
+    border-top-color: rgba(144, 144, 144, 255);
+    border-bottom-color: rgba(144, 144, 144, 255);
+    border-left-width: 13px;
+    border-right-width: 13px;
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    margin-top: 0;
+}
+
+.BG {
+    left: -400px;
+    transition-duration: 0.7s;
+    transition-property: position;
+}
+
+.BG.open {
+    left: 0;
+}
+
+.BG.open.close {
+}

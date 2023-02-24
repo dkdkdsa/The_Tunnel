@@ -6,8 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
 
     [SerializeField] private float speed;
+    [SerializeField] private float jumpPower;
 
     private Rigidbody rigid;
+    private JumpBox jumpBox;
 
     public bool moveAble { get; set; } = true;
 
@@ -15,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     {
 
         rigid = GetComponent<Rigidbody>();
+        jumpBox = transform.Find("JumpBox").GetComponent<JumpBox>(); 
 
     }
 
@@ -25,6 +28,7 @@ public class PlayerMove : MonoBehaviour
         if (!moveAble) return;
 
         Move();
+        Jump();
 
     }
 
@@ -40,6 +44,18 @@ public class PlayerMove : MonoBehaviour
         Vector3 vel = (hor + ver).normalized * speed;
 
         rigid.MovePosition(transform.position + vel * Time.deltaTime);
+
+    }
+
+    private void Jump()
+    {
+
+        if(Input.GetKeyDown(KeyCode.Space) && jumpBox.isGround)
+        {
+
+            rigid.velocity += new Vector3(0, jumpPower, 0);
+
+        }
 
     }
 

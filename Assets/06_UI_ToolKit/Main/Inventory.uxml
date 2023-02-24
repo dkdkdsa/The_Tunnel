@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/06_UI_ToolKit/Main/Inventory.uss?fileID=7433441132597879392&amp;guid=8e3d2ec1e6c937b40a5181a4293b9097&amp;type=3#Inventory" />
+    <ui:VisualElement name="root" style="flex-grow: 1; align-items: flex-start; margin-left: 30px; padding-top: 30px; padding-bottom: 30px;">
+        <ui:VisualElement name="BG" class="BG" style="flex-direction: column; justify-content: space-around; flex-grow: 1; width: 300px; background-color: rgb(103, 103, 103); border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; align-items: center;">
+            <ui:VisualElement name="Slot" class="slot" />
+            <ui:VisualElement name="Slot" class="slot" />
+            <ui:VisualElement name="Slot" class="slot" />
+            <ui:VisualElement name="Slot" class="slot" />
+            <ui:VisualElement name="Slot" class="slot" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
