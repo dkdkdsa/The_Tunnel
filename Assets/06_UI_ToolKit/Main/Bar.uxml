@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/06_UI_ToolKit/Main/Bar.uss?fileID=7433441132597879392&amp;guid=ec2379bbb20bdfe4da73dd7f8d265d7e&amp;type=3#Bar" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; flex-direction: column; align-items: flex-end; margin-right: 10px;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="HP" class="bar" style="font-size: 48px; color: rgb(255, 73, 73);" />
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="O2" class="bar" style="font-size: 48px; color: rgba(195, 195, 195, 255);" />
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="Food" class="bar" style="font-size: 48px; color: rgb(255, 189, 90);" />
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="Water" class="bar" style="font-size: 48px; color: rgb(85, 118, 255);" />
+    </ui:VisualElement>
+</ui:UXML>
