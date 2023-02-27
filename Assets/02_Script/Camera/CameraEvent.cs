@@ -42,7 +42,7 @@ public class CameraEvent : UIToolKitRoot
 
             }
 
-            text.text = currentObj.itemTextKey;
+            text.text = Manager.Managers.GetText(currentObj.itemTextKey);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -69,6 +69,7 @@ public class CameraEvent : UIToolKitRoot
         {
 
             currentObj = null;
+            text.text = "";
 
         }
 

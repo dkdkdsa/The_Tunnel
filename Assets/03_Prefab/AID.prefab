@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <itemSprite>k__BackingField: {fileID: 21300000, guid: c721ded9cefad8f4abff0e8cd4f51fd2, type: 3}
   <itemGameObject>k__BackingField: AID
+  <itemTextKey>k__BackingField: Item
 --- !u!64 &2586125106152189757
 MeshCollider:
   m_ObjectHideFlags: 0
