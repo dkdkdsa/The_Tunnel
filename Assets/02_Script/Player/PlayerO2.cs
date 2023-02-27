@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerO2 : MonoBehaviour
 {
 
-    private bool isIn = false;
+    public bool isIn { get; private set; }
     private SurvivalValue survival;
 
     private void Awake()
