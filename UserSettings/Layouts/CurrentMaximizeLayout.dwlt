@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 301
     height: 663
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0681fcff
-      m_LastClickedID: -229114
-      m_ExpandedIDs: 0473fcff68a2fcff862cfeff8e2cfeffa434feffac34feff18a2fefff4eaffff1afbfffff4ffffff7c7300008c730000aa730000b4730000
+      m_SelectedIDs: b0730000
+      m_LastClickedID: 29616
+      m_ExpandedIDs: 1afbffff9c730000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -242,7 +242,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -535,9 +535,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1413742, y: -8.593493, z: 16.9057}
+    m_Target: {x: -23.06958, y: -10.8902, z: -4.905818}
     speed: 2
-    m_Value: {x: -1.1413742, y: -8.593493, z: 16.9057}
+    m_Value: {x: -23.06958, y: -10.8902, z: -4.905818}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -584,9 +584,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.31891227, y: -0.2832518, z: 0.10031915, w: 0.8991023}
+    m_Target: {x: 0.15797293, y: -0.7390031, z: 0.18580258, w: 0.6283346}
     speed: 2
-    m_Value: {x: 0.31885085, y: -0.28319722, z: 0.10029983, w: 0.8989291}
+    m_Value: {x: 0.15794072, y: -0.73885244, z: 0.18576469, w: 0.62820643}
   m_Size:
     m_Target: 16.958813
     speed: 2
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -634,14 +634,14 @@ MonoBehaviour:
     y: 663
     width: 1466
     height: 284
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -683,22 +683,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/02_Script/Manager
+    - Assets/01_Assets/Footsteps - Essentials/Footsteps_Rock/Footsteps_Rock_Walk
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/02_Script/Manager
+  - Assets/01_Assets/Footsteps - Essentials/Footsteps_Rock/Footsteps_Rock_Walk
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\The_Tunnel
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 180}
-    m_SelectedIDs: 4ab80000
-    m_LastClickedID: 47178
-    m_ExpandedIDs: 00000000267400002874000082750000967500009875000002780000
+    scrollPos: {x: 0, y: 29}
+    m_SelectedIDs: be7c0000
+    m_LastClickedID: 31934
+    m_ExpandedIDs: 00000000267500002a7500002c7500002e750000407c0000ea7d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -726,7 +726,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000267400002874000082750000967500009875000002780000
+    m_ExpandedIDs: 0000000026750000287500002a7500002c7500002e75000030750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -751,8 +751,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 94b90000
-    m_LastClickedInstanceID: 47508
+    m_SelectedInstanceIDs: b0730000
+    m_LastClickedInstanceID: 29616
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -871,7 +871,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 216
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

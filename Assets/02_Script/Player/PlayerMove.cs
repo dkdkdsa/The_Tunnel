@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     private JumpBox jumpBox;
 
     public bool moveAble { get; set; } = true;
+    public bool isMove { get; private set; }
 
     private void Awake()
     {
@@ -25,7 +26,14 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
 
-        if (!moveAble) return;
+        if (!moveAble)
+        {
+
+            isMove = false;
+
+            return;
+
+        }
 
         Move();
         Jump();
@@ -42,6 +50,19 @@ public class PlayerMove : MonoBehaviour
         Vector3 ver = transform.forward * z;
 
         Vector3 vel = (hor + ver).normalized * speed;
+
+        if(vel == Vector3.zero)
+        {
+
+            isMove = false;
+
+        }
+        else
+        {
+
+            isMove = true;
+
+        }
 
         rigid.MovePosition(transform.position + vel * Time.deltaTime);
 
