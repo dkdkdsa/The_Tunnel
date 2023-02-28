@@ -1,7 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="Root" style="flex-grow: 1; justify-content: flex-end; align-items: flex-end;">
-        <ui:VisualElement style="width: 245px; height: 245px; justify-content: flex-end; align-items: flex-end; background-image: url(&apos;project://database/Assets/01_Assets/Sprite/Light.png?fileID=21300000&amp;guid=fe952ec1064199447b3ac1007c9fa6bb&amp;type=3#Light&apos;);">
-            <ui:Label text="F" display-tooltip-when-elided="true" style="color: rgba(255, 255, 255, 255); font-size: 64px;" />
+        <ui:VisualElement name="Tab" style="width: 245px; height: 245px; justify-content: flex-end; align-items: flex-end; background-image: url(&apos;project://database/Assets/01_Assets/Sprite/Inventory.png?fileID=21300000&amp;guid=3af485a30fce34b4db9c5f437378cfbe&amp;type=3#Inventory&apos;);">
+            <ui:Label text="Tab" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); font-size: 64px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="F" style="width: 245px; height: 245px; justify-content: flex-end; align-items: flex-end; background-image: url(&apos;project://database/Assets/01_Assets/Sprite/Light.png?fileID=21300000&amp;guid=fe952ec1064199447b3ac1007c9fa6bb&amp;type=3#Light&apos;);">
+            <ui:Label text="F" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); font-size: 64px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

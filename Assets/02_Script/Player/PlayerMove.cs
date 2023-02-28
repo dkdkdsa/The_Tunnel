@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class PlayerMove : MonoBehaviour
 
     private Rigidbody rigid;
     private JumpBox jumpBox;
+    private CinemachineBasicMultiChannelPerlin cbmcp;
+    private float shackLerpSpeed = 15;
 
     public bool moveAble { get; set; } = true;
     public bool isMove { get; private set; }
@@ -18,12 +21,43 @@ public class PlayerMove : MonoBehaviour
     {
 
         rigid = GetComponent<Rigidbody>();
-        jumpBox = transform.Find("JumpBox").GetComponent<JumpBox>(); 
+        jumpBox = transform.Find("JumpBox").GetComponent<JumpBox>();
+        cbmcp = FindObjectOfType<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
     }
 
 
     private void Update()
+    {
+
+        if (!moveAble)
+        {
+
+            isMove = false;
+            SetCbmcp(0, 0);
+
+            return;
+
+        }
+
+        if (isMove)
+        {
+
+            SetCbmcp(2f, 2);
+
+        }
+        else
+        {
+
+            SetCbmcp(0, 0);
+
+        }
+
+        Jump();
+
+    }
+
+    private void FixedUpdate()
     {
 
         if (!moveAble)
@@ -36,7 +70,6 @@ public class PlayerMove : MonoBehaviour
         }
 
         Move();
-        Jump();
 
     }
 
@@ -65,6 +98,14 @@ public class PlayerMove : MonoBehaviour
         }
 
         rigid.MovePosition(transform.position + vel * Time.deltaTime);
+
+    }
+
+    private void SetCbmcp(float amplitudeGain, float frequencyGain)
+    {
+
+        cbmcp.m_AmplitudeGain = Mathf.Lerp(cbmcp.m_AmplitudeGain, amplitudeGain, shackLerpSpeed * Time.deltaTime);
+        cbmcp.m_FrequencyGain = Mathf.Lerp(cbmcp.m_FrequencyGain, frequencyGain, shackLerpSpeed * Time.deltaTime);
 
     }
 

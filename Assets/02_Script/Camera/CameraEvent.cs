@@ -10,6 +10,7 @@ public class CameraEvent : UIToolKitRoot
 
     private IItem currentObj;
     private Label text;
+    public bool eventAble = true;
 
     protected override void OnEnable()
     {
@@ -29,6 +30,8 @@ public class CameraEvent : UIToolKitRoot
 
     private void Range()
     {
+
+        if (!eventAble) return;
 
         bool objAble = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, range, LayerMask.GetMask("Item"));
 
@@ -58,7 +61,9 @@ public class CameraEvent : UIToolKitRoot
                 else if (hit.transform.CompareTag("UseItem"))
                 {
 
+                    var item = hit.transform.GetComponent<IUseableItem>();
 
+                    item.UseEvent();
 
                 }
 

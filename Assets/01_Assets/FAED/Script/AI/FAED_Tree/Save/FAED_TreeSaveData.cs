@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FD.AI.Tree.Node;
 
 namespace FD.AI.Tree
 {
+
+    public enum FAED_TreeNodeType
+    {
+
+        Root,
+        Sequence,
+        Tree,
+        If,
+
+    }
 
     [System.Serializable]
     public class FAED_TreeNodeData

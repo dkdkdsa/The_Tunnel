@@ -43,6 +43,28 @@ namespace Manager.Main
             var loadList = Resources.Load<TextListSO>("SO/TextList");
             textList = loadList.textList;
 
+            string state = PlayerPrefs.GetString("Lag");
+
+            if(state == "")
+            {
+
+                PlayerPrefs.SetString("Lag", "English");
+
+            }
+
+            if(state == "English")
+            {
+
+                this.state = LanguageState.English;
+
+            }
+            else
+            {
+
+                this.state = LanguageState.Korean;
+
+            }
+
         }
 
     }

@@ -16,3 +16,6 @@ MonoBehaviour:
   - key: Item
     koreanText: "E\uD0A4\uB97C \uB20C\uB7EC \uC218\uC9D1"
     englishText: Collect by pressing E
+  - key: Door
+    koreanText: "E\uD0A4\uB85C \uC5F4\uAE30"
+    englishText: Press E to open

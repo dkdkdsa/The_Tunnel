@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 using FD.AI.Tree.Node;
+using FD.AI.Tree;
 
 namespace FD.UI
 {
@@ -114,3 +116,4 @@ namespace FD.UI
     }
 
 }
+#endif
