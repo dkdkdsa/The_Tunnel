@@ -13,6 +13,7 @@ public class Food : MonoBehaviour, ICollectionAbleItem
 
     public bool overlap { get; set; } = false;
     public Inventory inventory { get; set; }
+    public string itemName { get; set; } = "Food";
 
     private void OnEnable()
     {
@@ -27,7 +28,7 @@ public class Food : MonoBehaviour, ICollectionAbleItem
     public void InventoryUseEvent()
     {
 
-        survivalValue.AddValue(ValueType.Food, 10);
+        survivalValue.AddValue(ValueType.Hp, 3);
 
     }
 

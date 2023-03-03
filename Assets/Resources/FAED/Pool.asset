@@ -19,3 +19,6 @@ MonoBehaviour:
   - poolName: Food
     poolObj: {fileID: 6353428005960427544, guid: a0c102a1331f3944082e66d2c5398389, type: 3}
     poolSize: 1
+  - poolName: Tape
+    poolObj: {fileID: 5821124052245648437, guid: 061345eacf52252439190526ab0c0e43, type: 3}
+    poolSize: 1

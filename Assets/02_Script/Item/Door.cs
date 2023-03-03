@@ -16,8 +16,7 @@ public class Door : MonoBehaviour, IUseableItem
     public Sprite itemSprite { get; set; }
     public string itemGameObject { get; set; }
     public string itemTextKey { get; set; } = "Door";
-
-
+    public string itemName { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
     private void Awake()
     {

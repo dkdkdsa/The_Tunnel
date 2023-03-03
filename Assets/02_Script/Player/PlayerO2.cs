@@ -53,16 +53,16 @@ public class PlayerO2 : MonoBehaviour
         while (true)
         {
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             if (isIn)
             {
 
-                survival.Drawoff(ValueType.O2, 1);
+                survival.DrawOff(ValueType.O2, 1);
                 if(survival.o2 == 0)
                 {
 
-                    survival.Drawoff(ValueType.Hp, 1);
+                    survival.DrawOff(ValueType.Hp, 1);
 
                 }
 

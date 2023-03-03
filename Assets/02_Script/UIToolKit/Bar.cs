@@ -25,8 +25,6 @@ public class Bar : UIToolKitRoot
         base.OnEnable();
 
         hpLabel = rootElement.Q<Label>("HP");
-        waterLabel = rootElement.Q<Label>("Water");
-        foodLabel = rootElement.Q<Label>("Food");
         o2Label = rootElement.Q<Label>("O2");
 
     }
@@ -35,8 +33,6 @@ public class Bar : UIToolKitRoot
     {
 
         hpLabel.text = SetText(survival.hp, "HP");
-        waterLabel.text = SetText(survival.water, "Water");
-        foodLabel.text = SetText(survival.food, "Food");
         o2Label.text = SetText(survival.o2, "O2");
 
     }

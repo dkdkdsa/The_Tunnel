@@ -87,6 +87,7 @@ public class Inventory : UIToolKitRoot
             if (slot == null) return false;
 
             slot.isSet = true;
+            slot.itemName = item.itemName;
             slot.useAction = item.InventoryUseEvent;
             slot.itemObj = item.itemGameObject;
             slot.slotElement.style.backgroundImage = new StyleBackground(item.itemSprite);
@@ -101,6 +102,7 @@ public class Inventory : UIToolKitRoot
 
                     slot.isSet = false;
                     slot.useAction();
+                    slot.itemName = "";
                     slot.slotElement.style.backgroundImage = null;
                     slot.slotElement.UnregisterCallback(evt);
 
@@ -110,10 +112,13 @@ public class Inventory : UIToolKitRoot
 
                     slot.isSet = false;
                     FAED.Pop(slot.itemObj, dropPos.position, Quaternion.identity);
+                    slot.itemName = "";
                     slot.slotElement.style.backgroundImage = null;
                     slot.slotElement.UnregisterCallback(evt);
 
                 }
+
+                slot.crtEvt = evt;
 
             };
 
@@ -128,5 +133,43 @@ public class Inventory : UIToolKitRoot
 
     }
 
+
+    public bool UseInventoryItem(string itemName, bool eventAble = false)
+    {
+
+        var item = slots.Find(x => x.itemName == itemName);
+
+        if(item != null)
+        {
+
+            if (eventAble)
+            {
+
+                item.useAction();
+                item.isSet = false;
+                item.useAction();
+                item.itemName = "";
+                item.slotElement.style.backgroundImage = null;
+                item.slotElement.UnregisterCallback(item.crtEvt);
+
+            }
+            else
+            {
+
+                item.isSet = false;
+                item.useAction();
+                item.itemName = "";
+                item.slotElement.style.backgroundImage = null;
+                item.slotElement.UnregisterCallback(item.crtEvt);
+
+            }
+
+            return true;
+
+        }
+
+        return false;
+
+    }
 
 }

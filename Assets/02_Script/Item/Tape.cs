@@ -2,19 +2,19 @@ using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class Water : MonoBehaviour, ICollectionAbleItem
+public class Tape : MonoBehaviour, ICollectionAbleItem
 {
+
     [field: SerializeField] public Sprite itemSprite { get; set; }
-    [field: SerializeField]  public string itemGameObject { get; set; }
-    [field: SerializeField] public string itemTextKey { get; set; }
+    [field: SerializeField] public string itemGameObject { get; set; }
+    [field: SerializeField] public string itemTextKey { get; set; } = "Item";
 
     private SurvivalValue survivalValue;
 
     public bool overlap { get; set; } = false;
     public Inventory inventory { get; set; }
-    public string itemName { get; set; } = "Water";
+    public string itemName { get; set; } = "Tape";
 
     private void OnEnable()
     {
@@ -29,7 +29,7 @@ public class Water : MonoBehaviour, ICollectionAbleItem
     public void InventoryUseEvent()
     {
 
-        survivalValue.AddValue(ValueType.Hp, 1);
+        survivalValue.AddValue(ValueType.Hp, 2);
 
     }
 
@@ -44,6 +44,5 @@ public class Water : MonoBehaviour, ICollectionAbleItem
         }
 
     }
-
 
 }

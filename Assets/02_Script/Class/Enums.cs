@@ -6,8 +6,6 @@ public enum ValueType
 {
 
     Hp,
-    Water,
     O2,
-    Food
 
 }

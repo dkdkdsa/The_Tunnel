@@ -14,7 +14,7 @@ public class AID : MonoBehaviour, ICollectionAbleItem
 
     public bool overlap { get; set; } = false;
     public Inventory inventory { get; set; }
-
+    public string itemName { get; set; } = "AID";
 
     private void OnEnable()
     {

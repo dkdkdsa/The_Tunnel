@@ -18,8 +18,6 @@ public class SurvivalValue : MonoBehaviour
 
     public int hp { get; private set; } = maxValue;
     public int o2 { get; private set; } = maxValue;
-    public int food { get; private set; } = maxValue;
-    public int water { get; private set; } = maxValue;
 
     private void Awake()
     {
@@ -30,19 +28,10 @@ public class SurvivalValue : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-
-        StartCoroutine(lifeActivity());
-
-    }
-
     private void Update()
     {
         
         hp = Mathf.Clamp(hp, 0, maxValue);
-        food = Mathf.Clamp(food, 0, maxValue);
-        water = Mathf.Clamp(water, 0, maxValue);
         o2 = Mathf.Clamp(o2, 0, maxValue);
 
         if(hp == 0 && isDie == false)
@@ -65,15 +54,13 @@ public class SurvivalValue : MonoBehaviour
 
     }
 
-    public void Drawoff(ValueType type, int value)
+    public void DrawOff(ValueType type, int value)
     {
 
         Action action = type switch
         {
 
             ValueType.Hp => () => hp -= value,
-            ValueType.Water => () => water -= value,
-            ValueType.Food => () => food -= value,
             ValueType.O2 => () => o2 -= value,
             _ => null
 
@@ -90,45 +77,12 @@ public class SurvivalValue : MonoBehaviour
         {
 
             ValueType.Hp => () => hp += value,
-            ValueType.Water => () => water += value,
-            ValueType.Food => () => food += value,
             ValueType.O2 => () => o2 += value,
             _ => null
 
         };
 
         action?.Invoke();
-
-    }
-
-    IEnumerator lifeActivity()
-    {
-
-        while (true)
-        {
-
-            yield return new WaitForSecondsRealtime(2f);
-            if(food == 0)
-            {
-
-                hp -= 1;
-
-            }
-
-            if(water == 0)
-            {
-
-                hp -= 1;
-
-            }
-
-            Drawoff(ValueType.Water, 1);
-            Drawoff(ValueType.Food, 1);
-
-
-            yield return null;
-
-        }
 
     }
 
