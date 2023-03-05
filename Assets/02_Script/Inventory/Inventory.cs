@@ -157,7 +157,6 @@ public class Inventory : UIToolKitRoot
             {
 
                 item.isSet = false;
-                item.useAction();
                 item.itemName = "";
                 item.slotElement.style.backgroundImage = null;
                 item.slotElement.UnregisterCallback(item.crtEvt);
