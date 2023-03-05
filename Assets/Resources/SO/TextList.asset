@@ -34,3 +34,6 @@ MonoBehaviour:
   - key: smallFuseBox
     koreanText: "E\uD0A4\uB85C \uC218\uB9AC (1\uBCA0\uD130\uB9AC \uD544\uC694)"
     englishText: Repair with E (requires 1 battery)
+  - key: Monitors
+    koreanText: "E\uD0A4\uB85C \uC81C\uC5B4\uC7A5\uCE58 \uAC00\uB3D9"
+    englishText: Activate the control with the E key

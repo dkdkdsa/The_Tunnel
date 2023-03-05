@@ -121,4 +121,18 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    public void SetSpeed(float value)
+    {
+
+        speed = value;
+
+    }
+
+
+    public float GetSpeed()
+    {
+
+        return speed;
+
+    }
 }
