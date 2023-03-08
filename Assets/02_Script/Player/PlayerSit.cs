@@ -8,12 +8,13 @@ public class PlayerSit : MonoBehaviour
 
     [SerializeField] private float sitSpeed;
     [SerializeField] private GameObject cameraObj;
+    [SerializeField] private AudioSource source;
 
 
     private PlayerMove playerMove;
     private CapsuleCollider capsuleCollider;
     private float originSpeed;
-    private bool isSit;
+    public bool isSit { get; private set; }
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class PlayerSit : MonoBehaviour
             capsuleCollider.center = new Vector3(0, -0.35f, 0);
             cameraObj.transform.DOLocalMoveY(0, 0.1f);
             playerMove.SetSpeed(sitSpeed);
+            source.volume = 0.3f;
 
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) && isSit)
@@ -56,6 +58,8 @@ public class PlayerSit : MonoBehaviour
             capsuleCollider.center = new Vector3(0, 0f, 0);
             cameraObj.transform.DOLocalMoveY(0.7f, 0.1f);
             playerMove.SetSpeed(originSpeed);
+
+            source.volume = 1f;
 
         }
 

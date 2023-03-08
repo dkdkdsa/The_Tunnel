@@ -55,6 +55,8 @@ public class Inventory : UIToolKitRoot
             {
 
                 inventoryBG.RemoveFromClassList("open");
+                UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+                UnityEngine.Cursor.visible = false;
                 isOpen = false;
 
                 playerMove.moveAble = true;
@@ -66,6 +68,9 @@ public class Inventory : UIToolKitRoot
 
                 inventoryBG.AddToClassList("open");
                 isOpen = true;
+
+                UnityEngine.Cursor.lockState = CursorLockMode.None;
+                UnityEngine.Cursor.visible = true;
 
                 playerMove.moveAble = false;
                 rotate.rotateAble = false;

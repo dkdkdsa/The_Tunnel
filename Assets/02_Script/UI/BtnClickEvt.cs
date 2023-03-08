@@ -9,7 +9,7 @@ public class BtnClickEvt : MonoBehaviour
     public void StartBtn()
     {
 
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("MainMap");
 
     }
 

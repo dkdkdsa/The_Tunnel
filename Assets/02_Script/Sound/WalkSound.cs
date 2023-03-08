@@ -24,7 +24,7 @@ public class WalkSound : MonoBehaviour
     private void Update()
     {
         
-        if(playerMove.isMove == true && source.isPlaying == false && jumpBox.isGround == true)
+        if(playerMove.isMove == true && source.isPlaying == false)
         {
 
             source.clip = FAED.Random(soundClips);
